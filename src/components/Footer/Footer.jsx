@@ -40,7 +40,7 @@ const Footer = () => {
      <EmailIcon/> <a href='mailto:1998faizali@gmail.com' target='_blank'> 1998faizali@gmail.com</a><br/>
       <LocationIcon/> <p>Delhi, India  </p>
       <iframe
-      // src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13999.127880296084!2d77.28292850000004!3d28.69616800000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfc759be98409%3A0xb6d651be78bf3035!2sKardampuri%20Extn%2C%20Kardam%20Puri%2C%20Babarpur%2C%20Delhi%2C%20110032!5e0!3m2!1sen!2sin!4v1707130456485!5m2!1sen!2sin"
+       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13999.127880296084!2d77.28292850000004!3d28.69616800000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfc759be98409%3A0xb6d651be78bf3035!2sKardampuri%20Extn%2C%20Kardam%20Puri%2C%20Babarpur%2C%20Delhi%2C%20110032!5e0!3m2!1sen!2sin!4v1707130456485!5m2!1sen!2sin"
       width="200" height="200"  allowfullscreen="" loading="lazy" >
       </iframe>
        </div>
