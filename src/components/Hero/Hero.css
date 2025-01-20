@@ -330,11 +330,18 @@
   }
   
   /* Image inside the circle */
-  .circle-image {
+  .circleImage {
+    width: 270px; /* Adjust size as needed */
+    height: 270px; /* Adjust size as needed */
+    border-radius: 50%; /* This makes the image circular */
+    overflow: hidden; /* Ensures the image fits inside the circle */
+  }
+  
+  .circleImage img {
     width: 100%;
     height: 100%;
-    border-radius: 50%;
-    object-fit: cover;    
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    object-position: top; /* Focuses on the center of the image (adjust as needed) */
   }
   
  

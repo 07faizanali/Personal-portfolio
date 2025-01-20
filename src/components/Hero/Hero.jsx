@@ -19,7 +19,7 @@ const Hero = () => {
       
       <div className="circleContainer">
           <div className="circleImage">
-            <img src="assets/images/hero-bg1.jpg" alt="Profile" />
+            <img src="assets/images/hero-image2.png" alt="Profile" />
             <div className="rectangleContainer">
              <div className="rectangle"></div>
             </div>
