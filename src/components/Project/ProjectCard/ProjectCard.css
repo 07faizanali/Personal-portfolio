@@ -1,0 +1,74 @@
+.work-project-card{
+    
+    border-radius:0.65rem ;
+    border: 2px solid #fd6f00;
+    padding: 1.5rem;
+    margin:  3rem;
+    height: 40rem;
+    text-align: justify;
+    
+}
+
+.work-project-card h5{
+    position: relative;
+    text-align: center;
+    top: -30px;
+    font-size: 1.2rem;
+    font-size: 600;
+    margin-bottom: 0.6rem;
+}
+.work-project-card h6{
+    position: relative;
+    top: -50px;
+    font-size: 1.2rem;
+    font-size: 600;
+    margin-bottom: 0.6rem;
+}
+
+.project-duration{
+    width: 150px;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 800;
+    background: #fd6f00;
+    border-radius: 0.3rem;
+    padding: 0.4rem 0.6rem;
+    margin-bottom: 1.3rem;
+    position: relative;
+    top: -20px;
+}
+
+.work-project-card ul li {
+    list-style: none;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 0.2rem;
+    position: relative;
+    top: -30px;
+    
+}
+
+.work-project-card ul li::after{
+    content: " ";
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #fd6f00;
+    border-radius: 0.5rem;
+    position: absolute;
+    left: -1.3rem;
+    top: 0.35rem;
+}
+
+@media (max-width: 769px){
+    .work-project-card{
+        margin: 0;
+    }
+
+    .work-project-card h6{
+        font-size: 0.95rem;
+    }
+
+    .work-project-card ul li{
+        font-size: 0.75rem;
+    }
+}

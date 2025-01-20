@@ -1,0 +1,125 @@
+.skills-container{
+    margin: 4rem 0;
+    position: relative;
+}
+
+/* .skills-container::after,
+.skills-container::before {
+    content: " ";
+    width: 28rem;
+    height: 28rem;
+    border-radius: 28.125rem;
+    background: #fd6f00;
+    position: absolute;
+    z-index: -1;
+    filter: blur(100px);
+}
+
+.skills-container::after{
+    top: -3rem;
+    left: -5rem;
+}
+
+.skills-container::before{
+    background: #6bb7d4;
+    bottom: 0;
+    right: 0;
+} */
+
+.skills-container h5{
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+
+}
+
+.skills-content{
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+.skills{
+    flex: 1;
+    display: grid;
+    color: #000000;
+    padding-left: 10px;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.skills-info{
+    flex: 1;
+    color: #000000;
+}
+
+
+.rightColumn {
+    flex: 1; /* Take up the remaining half of the container width */
+    padding-left: 10px; /* Add some spacing between columns */
+    text-align: left; /* Align text to the left */
+  }
+ 
+  .rightColumn h2{
+    font-size: 2rem;
+    font-weight: 800;
+  }
+  
+  .rightColumn p{
+    width: 100%;
+    height: auto;
+    margin-top: -15px;
+    top: 168px;
+    left: 714px;
+    font-size: 21px;
+    font-weight: 400;
+    text-align: justify;
+    font-family: 'poppins',sans-serif;
+    line-height: 31.5px;
+    letter-spacing: 0.003em;
+  }
+  
+.spanAbout{
+    color: #fd6f00;
+}
+
+
+@media (max-width: 1025px){
+    .skills{
+        padding-left: 1rem;
+    }
+
+    .skills,
+    .skills-content{
+        grid-gap: 2rem;
+    }
+}
+
+@media (max-width: 768px){
+    .skills-content{
+        flex-direction: column-reverse;
+        gap: 3rem;
+    }
+
+    .skills,
+    .skills-info{
+        width: 100%;
+    }
+
+    .skills-container h5{
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+    }
+
+    .skills-container::after,
+    .skills-container::before{
+        width: 18rem;
+        height: 18rem;
+    }
+}
+
+@media (max-width: 600px){
+        .skills-container{
+            padding: 0;
+        }
+}

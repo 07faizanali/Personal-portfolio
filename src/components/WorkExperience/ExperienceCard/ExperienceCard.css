@@ -1,0 +1,67 @@
+.work-experience-card{
+    width: 147%;
+    border-radius:0.65rem ;
+    border: 2px solid #fd6f00;
+    padding: 1.5rem;
+    margin:  3rem;
+    
+}
+
+.work-experience-card h6{
+    font-size: 2rem;
+    font-size: 800;
+    margin-bottom: 0.6rem;
+    position: relative;
+    top: -70px;
+}
+
+.work-duration{
+    display: inline-block;
+    width: 200px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #fd6f00;
+    border-radius: 0.3rem;
+    padding: 0.4rem 0.6rem;
+    margin-bottom: 1.3rem;
+    position: relative;
+    top: -60px;
+}
+
+.work-experience-card ul li {
+    list-style: none;
+    font-size: 21px;
+    font-weight: 400;
+    text-align: justify;
+    font-family: 'poppins',sans-serif;
+    line-height: 31.5px;
+    letter-spacing: 0.003em;
+    margin-bottom: 0.6rem;
+    position: relative;
+    top: -50px;
+}
+
+.work-experience-card ul li::after{
+    content: " ";
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #fd6f00;
+    border-radius: 0.5rem;
+    position: absolute;
+    left: -1.3rem;
+    top: 0.35rem;
+}
+
+@media (max-width: 769px){
+    .work-experience-card{
+        margin: 0;
+    }
+
+    .work-experience-card h6{
+        font-size: 0.95rem;
+    }
+
+    .work-experience-card ul li{
+        font-size: 0.75rem;
+    }
+}

@@ -1,0 +1,94 @@
+.services {
+    padding: 80px 0;
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically if needed */
+    text-align: center; /* Center-aligns the text */
+    flex-direction: column;
+    width: 1240px;
+    height: 584px;
+    top: 1818px;
+    left: 250px;
+    
+
+  }
+  
+  .services h2 {
+    top: 55px;
+    font-size: 65px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-family: 'poppins',sans-serif;
+    line-height: 97.5px;
+    letter-spacing: 0.003em;
+    margin-bottom: 20px;
+  }
+  
+  .services p {
+    width: 756px;
+    height: 101px;
+    top: 168px;
+    margin: 0px auto 40px auto;
+    margin-bottom: 40px;
+    font-size: 21px;
+    font-weight: 400;    
+    font-family: 'poppins',sans-serif;
+    line-height: 31.5px;
+    letter-spacing: 0.003em;
+  }
+  
+  .serviceCards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .card {
+    width: 250px;
+    height: 246px;
+    top: 238px;
+    border-radius: 14px;
+    background: #f8f8f8;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+
+  .card h3 {
+    width: 264px;
+    height: 48px;
+    top: 391px;
+    font-size: 32px;
+    font-family: 'poppins',sans-serif;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: 0.003em;
+    margin-bottom: 15px;
+  }
+  
+  .card p {
+    width: 270px;
+    height: 120px;
+    top: 454px;
+    left: -0px;
+    margin-left: 0px;
+    font-family: 'poppins',sans-serif;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 28.5px;
+    letter-spacing: 0.003em;
+    color: #000000;
+  }
+  
+
+  .card img{
+    width: 72px;
+    height: 82px;
+    left: -0px;
+  }
