@@ -6,10 +6,19 @@
 
 
 
-.header {
-  padding: 20px 0;
-  position: sticky;
+html {
+  scroll-behavior: smooth;
 }
+
+.header {
+  position: sticky;
+  top: 0; /* This is REQUIRED to make sticky work */
+  z-index: 999; /* Ensure it stays above all other content */
+  background-color: #fff; /* Needed to avoid transparency during scroll */
+  padding: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Optional: nice shadow on scroll */
+}
+
 
 .nav {
   display: flex;
@@ -19,8 +28,8 @@
 }
 
 .mu {
-    width: 67px; /* Adjust the size as needed */
-    height: 67px; /* Adjust the size as needed */
+    width: 65px; /* Adjust the size as needed */
+    height: 60px; /* Adjust the size as needed */
     background-color: #fd6f00;
     border-radius: 50%;
     color: #000000 ;
