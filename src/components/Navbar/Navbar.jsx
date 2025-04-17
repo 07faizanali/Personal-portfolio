@@ -29,8 +29,8 @@ const Navbar = () => {
             <li><a href="#projects">Projects</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><DownloadForOfflineIcon className='downbtn'/><button  className="btn">Download CV</button></li>
-          </ul>
+            </ul>
+            <button  className="btn"><DownloadForOfflineIcon className='downbtn'/>Download CV</button>
           
         </nav>
       </div>

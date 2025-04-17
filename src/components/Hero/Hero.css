@@ -358,7 +358,7 @@
   .socialIcons {
     position: absolute;
     bottom: 20px; /* Adjust the distance from the bottom */
-    left: 83%; /* Center horizontally */
+    left: 67%; /* Center horizontally */
     top: 530px;
     transform: translateX(-50%); /* Center horizontally */
     display: flex;

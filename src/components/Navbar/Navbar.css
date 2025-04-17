@@ -35,7 +35,7 @@
     line-height: 1.2;
     margin-left: 40px;
     position: relative;
-    right: 20px; /* Reduce space to bring "M Umair" closer */
+    right: 200px; /* Reduce space to bring "M Umair" closer */
 }
 
 .m {
@@ -46,7 +46,8 @@
   line-height: 58.51px;
   font-family: 'Montserrat', sans-serif;
   position: relative;
-  right: 55px;
+  right: 190px;
+  top: 4px;
 }
 
 .umair {
@@ -61,7 +62,7 @@
 .navLinks {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
   list-style: none; /* Remove bullets from the list */
   margin-right: 0px; /* Move links slightly to the left */
 }
@@ -71,6 +72,7 @@
 }
 
 .navLinks a {
+  align-items: center;
   font-family: 'Poppins', sans-serif;
   font-size: 21px;
   font-weight: 400;
@@ -82,17 +84,18 @@
 
 .downbtn{
   position: relative;
-  left: 165px;
-  top: 5px;
+  top: 4px;
 }
+
 .btn {
-  margin-left: -30px;
-  width: 198px;
+  position: relative;
+  left: 140px;
+  width: 228px;
   height: 52px;
   padding: 10px 20px;
   background-color: #fd6f00;
   color: #000000;
-  border-radius: 5px;
+  border-radius: 35px;
   font-size: 21px;
   font-weight: 400;
   border: none;
