@@ -20,7 +20,7 @@ form textarea{
     width: 90%;
     font-size: 0.9rem;
     color: #000000;
-    border: 2px solid #fd6f00;
+    border: 2px solid #b68f63;
     border-radius: 0.6rem;
     padding: 1rem;
 }
@@ -32,8 +32,8 @@ form button{
     font-size: 1rem;
     font-weight: 500;
     color: #000000;
-    background: linear-gradient(180deg, #c0bdce -90%, #fd6f00 100%);
-    border: 1.5px solid #fd6f00;
+    background: linear-gradient(180deg, #c0bdce -90%, #b68f63 100%);
+    border: 1.5px solid #b68f63;
     border-radius: 0.6rem;
     padding: 0.7rem;
     transition: all 0.3s ease;

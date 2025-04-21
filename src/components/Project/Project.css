@@ -1,88 +1,28 @@
-/* .project-container{
-    margin: 4rem 0;
-    position: relative;
-}
-
-.project-container h5{
-    font-size: 2rem;
-    font-weight: 800;
-    margin-bottom: -1rem;
-}
-
-.arrow-left,
-.arrow-right{
-    width: 2.2rem;
-    height: 2.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fd6f00;
-    border-radius: 0.65rem;
-    border: 2px solid #fd6f00;
-    
-    position: absolute;
-    top: 55%;
-    z-index: 2;
-    cursor: pointer;
-}
-
-.arrow-left span,
-.arrow-right span{
-    font-size: 2rem;
-    font-weight: 500;
-}
-
-.arrow-left{
-    left: -1rem;
-}
-
-.arrow-right{
-    right: -1rem;
-}
-
-@media (max-width: 1025px){
-    .arrow-left{
-        left: 0rem;
-    }
-    .arrow-right{
-        right: 0rem;
-    }
-    
-}
-
-@media (max-width: 769px){
-
-    .project-container h5{
-        font-size: 1.3rem;
-        margin-bottom: 2rem;
-    }
-    .arrow-left{
-        left: -1rem;
-    }
-    .arrow-right{
-        right: -1rem;
-    }
-} */
-
-
-
-
 .projects {
     padding: 80px 0;
     text-align: center;
   }
   
+.heading{
+  background: linear-gradient(to right, #b68f63, #ccbe72);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
   .projects h2 {
     top: 55px;
     font-size: 65px;
-    margin-bottom: 20px;
     font-weight: 600;
     font-family: 'poppins',sans-serif;
     line-height: 97.5px;
     letter-spacing: 0.003em;
-    margin-bottom: 20px;
+  
   }
   
+  h4{
+    position: relative;
+    top: -80px;
+  }
   .projects p {
     margin-bottom: 40px;
   }
@@ -126,16 +66,37 @@
   .projectCard {
     width: 445px;
     height: 448px;
-    top: 419px;
     background: #FFEBDB;
     border-radius: 12px;
     padding: 20px;
+    overflow-y: auto; /* <--- Enables scrolling inside the card */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
   }
+
+  .projectCard::-webkit-scrollbar {
+    width: 8px;
+  }
   
+  .projectCard::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 10px;
+  }
+
+  .projectCard ul {
+    padding-left: 20px;
+    margin: 10px 0;
+    position: relative;
+    top: -70px;
+    text-align: left;
+  }
+  
+  .projectCard ul li {
+    font-size: 14px;
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
  
-  
   .projectCard img  {
     width: 274px;
     height: 465px;
@@ -183,4 +144,27 @@
     font-family: 'poppins',sans-serif;
     position: relative;
     top: -30px;
+  }
+
+  .link-btn{
+    border: 1px solid;
+    width: 10px;
+    height: 10px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    border-radius:  5px;
+    background: #659474;
+    position: relative;
+    right: 15px;
+  }
+
+  .link-btn2{
+    border: 1px solid;
+    width: 10px;
+    height: 10px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    border-radius:  5px;
+    background: #659474;
+    
   }

@@ -1,32 +1,83 @@
-.experience-container{
-    margin: 4rem 0;
+.experience-modern {
+  background: linear-gradient(135deg, #f0f4f8, #ffffff);
+    color: black;
+    padding: 4rem 2rem;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .experience-heading {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+    background: linear-gradient(to right, #b68f63, #ccbe72);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+  
+  .experience-card {
+    background: #ffffffcc;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 0 30px rgba(55, 58, 58, 0.05);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
     position: relative;
-    width: 50rem;
-}
-
-
-.experience-container h5{
-    font-size: 2rem;
-    font-weight: 800;
-    margin-bottom: -1rem;
-}
-
-
-@media (max-width: 769px){
-
-    .experience-container{
-        width: 45rem;
+    overflow: hidden;
+  }
+  
+  .experience-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 40px rgba(81, 85, 85, 0.2);
+  }
+  
+  .exp-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+ 
+  
+  .exp-date {
+    font-size: 0.9rem;
+    color: #b68f63
+  }
+  
+  .exp-description ul {
+    padding-left: 1rem;
+    list-style: none;
+  }
+  
+  .exp-description li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .exp-description li::before {
+    content: "✔";
+    position: absolute;
+    left: -1.5rem;
+    color: #b68f63;
+  }
+  
+  @media (max-width: 600px) {
+    .experience-heading {
+      font-size: 2rem;
     }
-
-    .experience-container h5{
-        font-size: 1.3rem;
-        margin-bottom: 2rem;
+  
+    .company-logo {
+      width: 40px;
+      height: 40px;
     }
-}
-
-@media (max-width: 425px){
-
-    .experience-container{
-        width: 23rem;
-    }
-}
+  }
+  

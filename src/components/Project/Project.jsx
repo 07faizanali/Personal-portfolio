@@ -1,104 +1,100 @@
-// import React, {useRef} from 'react'
-// import './Project.css'
-// import { PROJECTS } from '../../utils/data';
-// import ProjectCard from './ProjectCard/ProjectCard'
-// import Slider from 'react-slick'
+import React, { useState } from 'react';
+import './Project.css';
+import { PROJECTS } from '../../utils/data';
 
-// const Project = () => {
-      
-//   const sliderRef = useRef();
+const categories = [
+  "All",
+  "Frontend",
+  "Backend",
+  "FullStack",
+  "NextJS",
+  "ReactJS",
+  "Python",
+  "Blockchain",
+  "PowerBI"
+];
 
-//   const settings = {
-//     dots: false,
-//     infinite: true,
-//     speed: 500,
-//     slidesToShow: 2,
-//     slidesToScroll: 1,
-//     arrows: false,
-//     responsive: [
-//      {
-//       breakpoint: 769,
-//       settings: {
-//       slidesToShow: 1,
-//       slidesToScroll: 1,
-//      } 
-//     }
-//     ] 
-//   }
+// ✅ UPDATED: Get category based on technologies mentioned in the `responsibility` array
+const getCategory = (responsibilities) => {
+  const text = responsibilities.join(' ').toLowerCase();
 
-//   const slideRight = () => {
-//     sliderRef?.current?.slickNext();
-//   }
+  if (text.includes('react')) return 'ReactJS';
+  if (text.includes('next')) return 'NextJS';
+  if (text.includes('python') || text.includes('django')) return 'Python';
+  if (text.includes('fullstack') || (text.includes('frontend') && text.includes('backend'))) return 'FullStack';
+  if (text.includes('html') || text.includes('css') || text.includes('bootstrap') || text.includes('javascript')) return 'Frontend';
+  if (text.includes('java') || text.includes('servlet') || text.includes('jsp') || text.includes('node') || text.includes('express')) return 'Backend';
+  if (text.includes('blockchain')) return 'Blockchain';
+  if (text.includes('powerbi') || text.includes('data visualization')) return 'PowerBI';
 
-//   const slideLeft = () => {
-//     sliderRef?.current?.slickPrev();
-//   }
-//   return (
-
-//     <section id="project" className='project-container'>
-//         <h5 id='projects'>Projects</h5>
-//         <div className='project-content'>
-//           <div className='arrow-right' onClick={slideRight}>
-//             <span class='material-symbols-outlined'>chevron_right</span>
-//           </div> 
-
-//            <div className='arrow-left' onClick={slideLeft}>
-//             <span class="material-symbols-outlined">chevron_left</span>
-//           </div>
-
-//           <Slider ref={sliderRef} {...settings}>
-//             {PROJECTS.map((item)=>(
-//               <ProjectCard key={item.title} details={item} />
-//           ))}
-//           </Slider>
-//         </div>
-//     </section>
-//   )
-// }
-
-// export default Project
-
-
-
-import React from 'react';
-import  './Project.css';
+  return 'All';
+};
 
 const Project = () => {
+  const [activeCategory, setActiveCategory] = useState('All');
+
+  // ✅ Filter projects based on matched category
+  const filteredProjects = PROJECTS.filter((project) => {
+    const category = getCategory(project.responsibility);
+    return activeCategory === 'All' || category === activeCategory;
+  });
+
   return (
     <section id="projects" className="projects">
       <div className="container">
-        <h2>My Projects</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h2 className='heading'>My Projects</h2>
+        <p>Explore my work by category</p>
+
+        {/* Category buttons */}
         <div className="projectCategories">
-          <button>All</button>
-          <button>UI/UX</button>
-          <button className="active">Web Design</button>
-          <button>App Design</button>
-          <button>Graphic Design</button>
+          {categories.map((category) => (
+            <button
+              key={category}
+              className={activeCategory === category ? 'active' : ''}
+              onClick={() => setActiveCategory(category)}
+            >
+              {category}
+            </button>
+          ))}
         </div>
+
+        {/* Project cards */}
         <div className="projectGrid">
-          <div className="projectCard">
-          
-          <img src="assets/images/Web Designs2.png" alt="Project 3" className="background" />
-          <div className="forground"><img src="assets/images/Web Designs1.png" alt="Project 3" /></div>
-            <h2>Web design</h2>
-            <h3>AirCalling Landing Page Design</h3>
-          </div>
-          <div className="projectCard">
-            
-          <img src="assets/images/Web Designs4.png" alt="Project 3" className="background" />
-          <div className="forground1"><img src="assets/images/Web Designs3.png" alt="Project 3" /></div>
-          <h2>Web design</h2>
-            <h3>Business Landing Page Design</h3>
-          </div>
-          <div className="projectCard">
-            
-          <img src="assets/images/Web Designs6.png" alt="Project 3" className="background" />
-          <div className="forground2"><img src="assets/images/Web Designs5.png" alt="Project 3" /></div>
-          <h2>Web design</h2>
-            <h3>Ecom Web Page Design</h3>
-          </div>
-          
+          {filteredProjects.length > 0 ? (
+            filteredProjects.map((project, index) => (
+              <div className="projectCard" key={index}>
+                <h2>{project.title}</h2>
+                <h4>{project.date}</h4>
+                <ul>
+                  {project.responsibility.map((point, i) => (
+                    <li key={i}>{point}</li>
+                  ))}
+                </ul>
+                {project.githubLink && (
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className='link-btn'
+                  >
+                    GitHub Link
+                  </a>
+                )}
+                {project.liveDemo && (
+                  <a
+                    href={project.liveDemo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className='link-btn2'
+                  >
+                    Live Demo
+                  </a>
+                )}
+              </div>
+            ))
+          ) : (
+            <p>No projects found for "{activeCategory}"</p>
+          )}
         </div>
       </div>
     </section>

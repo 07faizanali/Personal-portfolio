@@ -1,18 +1,18 @@
-import React from 'react'
-import './ExperienceCard.css'
-const ExperienceCard = ({details}) => {
+import React from 'react';
+import './ExperienceCard.css';
+
+const ExperienceCard = ({ details }) => {
   return (
-    <div className='work-experience-card'>
-        <h6>{details.title}</h6>
+    <div className="exp-card">
+      <h3 className="exp-title">{details.title}</h3>
+      <p className="exp-date">{details.date}</p>
+      <ul className="exp-tasks">
+        {details.responsibilities.map((item) => (
+          <li key={item} dangerouslySetInnerHTML={{ __html: item }} />
+        ))}
+      </ul>
+    </div>
+  );
+};
 
-        <div className='work-duration'>{details.date}</div>
-        <ul>
-            {details.responsibilities.map((item)=>(
-                <li key={item} dangerouslySetInnerHTML={{ __html: item }} />
-            ))}
-        </ul>
-    </div>   
-  )
-}
-
-export default ExperienceCard
+export default ExperienceCard;

@@ -1,108 +1,112 @@
-.footer {
-    position: relative;  
-   }
-
-.Quick-Links{
-  position: relative;
-  top: 165px;
-  padding-left: 2rem;
+.main-footer {
+  background-color: #1d1d1d;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: sans-serif;
 }
 
-/* .Quick-Links > ul > li {
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  border-bottom: 1px solid #444;
+  padding-bottom: 40px;
+}
+
+.footer-box {
+  flex: 1 1 300px;
+}
+
+.footer-box h3 {
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.icon {
+  color: #f7941e;
+  margin-right: 8px;
+}
+
+.subscribe {
+  display: flex;
+  margin-top: 10px;
+}
+
+.subscribe input {
+  padding: 10px;
+  border: none;
+  border-radius: 25px 0 0 25px;
+  outline: none;
+  flex: 1;
+}
+
+.subscribe button {
+  padding: 10px 20px;
+  background: linear-gradient(to right, #b68f63, #ccbe72);
+  border: none;
+  border-radius: 0 25px 25px 0;
+  color: white;
   cursor: pointer;
-} */
- 
-.Contact {
-    padding-left: 30rem;
-    
-    
 }
-/* .Contact> a{
-  cursor: pointer;
-} */
+.instagram h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
 
-.Contact p{
-  color: #000000;
+.insta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 70px);
+  gap: 10px;
+  justify-content: center;
 }
-  .footer h5{
-    color: #fd6f00;
+
+.contact-info {
+  flex: 1 1 300px;
+  padding-left: 200px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.footer-bottom a {
+  color: #f7941e;
+  margin: 5px;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+.social-icons a {
+  color: #999;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #f7941e;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-top,
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  ul{
-    list-style-type: none;
+  .contact-info {
     padding-left: 0;
-  }
-   a {
-    color: #000000;
-    text-decoration: none;
-    font-size: 1.06rem;
-    list-style-type: none;
-    
-
+    margin-top: 20px;
   }
 
-  
-.social-media{
-  padding-left: 75rem;
-  position: absolute;
-  top: 165px;
-
-}
-
-  .Last-footer {
-    background: #262727;
-    text-align: center;
-    color: #666868;
-    padding: 1rem 0;
-  }
-  
-  .Last-footer p {
-    margin-bottom: 0;
-    font-size: 1.2rem;
-    font-weight: 700;
-  }
-  
-
-  
-
-@media (max-width: 1025px){
-    .social-media{
-    padding-left: 60rem;
-  }
-  .Contact{
-    padding-left: 20rem;
-  }
-}
-
-
-@media (max-width: 768px){
-  .Contact{
-    padding-left: 15rem;
+  .insta-grid {
+    justify-content: flex-start;
   }
 
-  .social-media{
-    padding-left: 40rem;
+  .instagram h3 {
+    text-align: left;
   }
-}
-
-
-@media (max-width: 425px){
-  
-  .Quick-Links{
-    padding-left: .5rem;
-  }
-
-  .Contact{
-    padding-left: 10rem;
-  }
-
-  .social-media{
-    margin-top: 11rem;
-    padding-left: .5rem;
-  }
-
-  .Last-footer{
-    width: 27.6rem;
-  }
-   
 }

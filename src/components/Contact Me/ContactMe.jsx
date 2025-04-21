@@ -1,31 +1,32 @@
-import React from 'react'
-import './ContactMe.css'
-import ContactInfoCard from './ContactInfoCard/ContactInfoCard'
-import ContactForm from './ContactForm/ContactForm'
+import React from 'react';
+import './ContactMe.css';
+import ContactInfoCard from './ContactInfoCard/ContactInfoCard';
+import ContactForm from './ContactForm/ContactForm';
 
 const ContactMe = () => {
   return (
-
     <section id='contact' className='contact-container'>
-      <h5 id='contact'>SEND ME A MESSAGE</h5>
+      <h2 className='contact-title'>Send Me a Message</h2>
+      <p className='contact-subtitle'>I'd love to connect with you! Reach out through the form or contact me directly.</p>
 
       <div className='contact-content'>
-        <div style={{ flex:1 }}>
-            <ContactInfoCard
-            iconUrl="./photos/icon-gmail.gif"
-            text="mohd.faizanali.m.z@gmail.com"
-            />
-            <ContactInfoCard
-            iconUrl="./photos/icons8-github-64.png"
+        <div className='contact-left'>
+          <ContactInfoCard
+            iconUrl="./assets/images/icon-gmail.png"
+            text="faizanali.webdev@gmail.com"
+          />
+          <ContactInfoCard
+            iconUrl="./assets/images/icon-github.gif"
             text="https://github.com/07faizanali"
-            />
+          />
         </div>
-        <div style={{ flex:1 }}>
-            <ContactForm/>
+
+        <div className='contact-right'>
+          <ContactForm />
         </div>
       </div>
-      </section>
- )
-}
+    </section>
+  );
+};
 
-export default ContactMe
+export default ContactMe;

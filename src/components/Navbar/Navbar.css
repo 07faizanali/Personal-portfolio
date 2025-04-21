@@ -30,7 +30,8 @@ html {
 .mu {
     width: 65px; /* Adjust the size as needed */
     height: 60px; /* Adjust the size as needed */
-    background-color: #fd6f00;
+    background: linear-gradient(to right, #b68f63, #ccbe72);
+    
     border-radius: 50%;
     color: #000000 ;
     display: flex;
@@ -102,11 +103,11 @@ html {
   width: 228px;
   height: 52px;
   padding: 10px 20px;
-  background-color: #fd6f00;
+  background: linear-gradient(to right, #b68f63, #ccbe72);
   color: #000000;
   border-radius: 35px;
   font-size: 21px;
-  font-weight: 400;
+  font-weight: 600;
   border: none;
   cursor: pointer; /* Change cursor on hover */
   font-family: 'Poppins', sans-serif;
@@ -114,5 +115,5 @@ html {
 }
 
 .btn:hover {
-  background-color: #e65c00;
+  background-color: #d6be8b;
 }
